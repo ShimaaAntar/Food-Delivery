@@ -1,0 +1,54 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/large_image"
+            android:layout_width="wrap_content"
+            android:layout_height="520dp"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/screen3" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/large_image"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/bentonsansbold"
+            android:textColor="@color/splash_small_text"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:text="Food Ninja is Where Your \n Comfort Food Lives" />
+
+        <TextView
+            android:id="@+id/small_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+            android:textSize="12sp"
+            android:textColor="@color/splash_small_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Enjoy a fast and smooth food delivery at \n your doorstep" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/small_text"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/green"
+            android:layout_marginTop="10dp"
+            android:text="Next" />
+
+    </RelativeLayout>
+</layout>

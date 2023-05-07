@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:src="@drawable/signup"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/signupFreeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/viga"
+        android:text="Sign Up For Free"
+        android:textColor="@color/splash_small_text"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/username_edit_text"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/baseline_account_circle_24"
+        android:hint="Anamwp . . |"
+        android:drawablePadding="10dp"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif-light"
+        android:background="@drawable/edit_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signupFreeTv"
+        android:paddingStart="15dp" />
+
+    <EditText
+        android:id="@+id/email_edit_text"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:background="@drawable/background_image"
+        android:drawableLeft="@drawable/baseline_email"
+        android:drawablePadding="8dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="Email"
+        android:paddingStart="15dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.607"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_edit_text" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_background"
+        android:drawableLeft="@drawable/image_lock"
+        android:drawablePadding="8dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="Password"
+        android:paddingStart="13dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/email_edit_text"
+        app:layout_constraintStart_toStartOf="@id/email_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/email_edit_text" />
+
+    <TextView
+        android:id="@+id/keepMeSignedInTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:text="Facebook"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/beenhere"
+        app:layout_constraintStart_toStartOf="@+id/passwordEditText"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditText"
+        android:paddingStart="15dp" />
+    <TextView
+        android:id="@+id/emailMeAboutPrice"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="11sp"
+        android:text="Email Me About Special Pricing"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/beenhere"
+        app:layout_constraintEnd_toEndOf="@+id/passwordEditText"
+        app:layout_constraintStart_toStartOf="@+id/passwordEditText"
+        app:layout_constraintTop_toBottomOf="@+id/keepMeSignedInTv"
+        android:paddingStart="15dp"
+        android:gravity="center_vertical" />
+    <TextView
+        android:id="@+id/createBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/next_btn_background"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@id/emailMeAboutPrice"
+        app:layout_constraintEnd_toEndOf="@+id/passwordEditText"
+        app:layout_constraintStart_toStartOf="@+id/passwordEditText"
+        android:text="Create Account"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/alreadyHaveAccount"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="already have an account?"
+        android:textColor="@color/green"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/passwordEditText"
+        app:layout_constraintStart_toStartOf="@+id/passwordEditText"
+        app:layout_constraintTop_toBottomOf="@+id/createBtn" />
+
+
+ </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

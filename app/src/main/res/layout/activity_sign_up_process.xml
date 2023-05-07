@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.firstOpenApp.SignUpProcessActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/background_triangle"
+            android:alpha=".25"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <ImageView
+            android:id="@+id/arrowBackBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/iconback"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="17dp" />
+        <TextView
+            android:id="@+id/fill_start_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Fill in your bio to get\n started"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginStart="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/arrowBackBtn" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="This data will be displayed in your account profile for security"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_goneMarginStart="10dp"
+            app:layout_constraintStart_toStartOf="@id/fill_start_tv"
+            app:layout_constraintTop_toBottomOf="@id/fill_start_tv" />
+        <EditText
+            android:id="@+id/first_name_text"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:hint="First Name"
+            android:drawablePadding="10dp"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-light"
+            android:background="@drawable/edit_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textview"
+            android:paddingStart="15dp" />
+        <EditText
+            android:id="@+id/last_name_text"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:hint="Last Name"
+            android:drawablePadding="10dp"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-light"
+            android:paddingStart="15dp"
+            android:background="@drawable/edit_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/first_name_text"
+             />
+        <EditText
+            android:id="@+id/mobil_name_text"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:hint="Mobile Number"
+            android:drawablePadding="10dp"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-light"
+            android:paddingStart="15dp"
+            android:background="@drawable/edit_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/last_name_text"
+            />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/green"
+            android:layout_marginTop="10dp"
+            android:text="Next"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
