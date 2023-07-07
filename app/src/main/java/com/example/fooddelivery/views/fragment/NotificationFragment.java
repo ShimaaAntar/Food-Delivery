@@ -9,8 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.fooddelivery.R;
-
-
 public class NotificationFragment extends Fragment {
 
     @Override

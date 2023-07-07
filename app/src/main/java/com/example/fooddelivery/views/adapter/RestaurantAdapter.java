@@ -7,7 +7,10 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.example.fooddelivery.R;
 import com.example.fooddelivery.databinding.ItemRestaurantBinding;
+import com.example.fooddelivery.views.model.RestaurantItem;
 import com.example.fooddelivery.views.model.Restaurants;
 
 import java.util.List;
@@ -15,13 +18,13 @@ import java.util.List;
 
 public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.ViewHolder> {
 
-    private List<Restaurants> restaurants;
+    private List<RestaurantItem> restaurants;
     private OnClickItemListener onClickItemListener;
     public interface OnClickItemListener{
-        void onClickRestroItem(Restaurants restaurants);
+        void onClickRestroItem(RestaurantItem restaurants);
     }
 
-    public RestaurantAdapter(List<Restaurants> restaurantsList, OnClickItemListener onClickItemListener){
+    public RestaurantAdapter(List<RestaurantItem> restaurantsList, OnClickItemListener onClickItemListener){
         restaurants = restaurantsList;
         this.onClickItemListener = onClickItemListener;
     }
@@ -36,13 +39,17 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Vi
     @Override
 
     public void onBindViewHolder(@NonNull RestaurantAdapter.ViewHolder holder, int position) {
-        Restaurants restaurant=restaurants.get(position);
-        holder.binding.restaurantImgView.setImageResource(restaurant.getRestaurantImg());
-        holder.binding.restroNameTv.setText(restaurant.getRestoName());
-        holder.binding.distanceInMinute.setText(restaurant.getDistanceInMins());
+        RestaurantItem restaurant=restaurants.get(position);
+        //holder.binding.restaurantImgView.setImageResource(restaurant.getPic());
+        holder.binding.restroNameTv.setText(restaurant.getName());
+        holder.binding.distanceInMinute.setText(restaurant.getDeliveryTime());
         holder.itemView.setOnClickListener(v -> {
             onClickItemListener.onClickRestroItem(restaurant);
         });
+        Glide.with(holder.itemView.getContext())
+                .load("http://206.189.103.8/api/"+restaurant.getPic())
+                .placeholder(R.drawable.restaurant1)
+                .into(holder.binding.restaurantImgView);
     }
 
     @Override
@@ -55,6 +62,10 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Vi
             binding=itemView;
 
         }
+    }
+    public void setList(List<RestaurantItem> restList){
+        this.restaurants = restList;
+        this.notifyDataSetChanged();
     }
 }
 

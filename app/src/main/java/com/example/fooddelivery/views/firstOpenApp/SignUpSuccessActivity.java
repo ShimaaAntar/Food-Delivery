@@ -8,7 +8,7 @@ import android.os.Bundle;
 
 import com.example.fooddelivery.R;
 import com.example.fooddelivery.databinding.ActivitySingeUpSuccessBinding;
-import com.example.fooddelivery.views.activities.HomeActivity;
+import com.example.fooddelivery.views.activities.MainActivity;
 
 public class SignUpSuccessActivity extends AppCompatActivity {
 
@@ -21,7 +21,7 @@ public class SignUpSuccessActivity extends AppCompatActivity {
     }
 
     private void goToNextScreen() {
-        Intent intent=new Intent(SignUpSuccessActivity.this, HomeActivity.class);
+        Intent intent=new Intent(SignUpSuccessActivity.this, MainActivity.class);
         startActivity(intent);
     }
 }

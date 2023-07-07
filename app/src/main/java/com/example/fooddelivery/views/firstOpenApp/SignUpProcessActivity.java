@@ -17,7 +17,6 @@ public class SignUpProcessActivity extends AppCompatActivity {
         binding= DataBindingUtil.setContentView(SignUpProcessActivity.this,R.layout.activity_sign_up_process);
         binding.button.setOnClickListener(v -> goToNextScreen());
     }
-
     private void goToNextScreen() {
         Intent intent=new Intent(SignUpProcessActivity.this,PaymentActivity.class);
         startActivity(intent);

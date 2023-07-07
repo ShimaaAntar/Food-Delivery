@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.fooddelivery.views.fragment.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_homeFragment2_to_filterFragment"
+            app:destination="@id/filterFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_popularRestaurantFragment"
+            app:destination="@id/popularRestaurantFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_popularMenuFragment2"
+            app:destination="@id/popularMenuFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/popularRestaurantFragment"
+        android:name="com.example.fooddelivery.views.fragment.PopularRestaurantFragment"
+        android:label="PopularRestaurantFragment" />
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.example.fooddelivery.views.fragment.FilterFragment"
+        android:label="FilterFragment" />
+    <fragment
+        android:id="@+id/popularMenuFragment2"
+        android:name="com.example.fooddelivery.views.fragment.PopularMenuFragment"
+        android:label="PopularMenuFragment" />
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.example.fooddelivery.views.fragment.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/chatFragment2"
+        android:name="com.example.fooddelivery.views.fragment.ChatFragment"
+        android:label="ChatFragment" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.fooddelivery.views.fragment.CartFragment"
+        android:label="CartFragment" />
+</navigation>

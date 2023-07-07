@@ -5,17 +5,17 @@
         android:enabled="true"
         android:icon="@drawable/baseline_home"/>
 
-    <item android:id="@+id/profileFragment"
+    <item android:id="@+id/profileFragment2"
         android:title="Profile"
         android:enabled="true"
         android:icon="@drawable/profile"/>
 
-    <item android:id="@+id/cartFragment"
+    <item android:id="@+id/chatFragment2"
         android:title="Cart"
         android:enabled="true"
         android:icon="@drawable/baseline_shopping_cart"/>
 
-    <item android:id="@+id/chatFragment"
+    <item android:id="@+id/cartFragment"
         android:title="Chat"
         android:enabled="true"
         android:icon="@drawable/baseline_chat"/>

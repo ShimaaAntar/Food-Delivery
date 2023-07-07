@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,9 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodDelivery.noActionBar"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name=".DetailsMenuActivity"
+            android:name=".views.activities.DetailsMenuActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -50,7 +52,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".views.activities.HomeActivity"
+            android:name=".views.activities.MainActivity"
             android:exported="false"></activity>
         <activity
             android:name=".views.firstOpenApp.SetLocationActivity"
